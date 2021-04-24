@@ -1,6 +1,18 @@
+<!-- Alex Siryy -->
+<!--
+    To make the site more responsive, the first thing that I notice when reducing the
+    screen width is that the background image tiles which is not visually appeasing.
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Responsive design lab">
+        <meta name="keywords" content="lab, 4, responsive, design">
+        <meta name="author" content="Alex Siryy">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MPLS Dogboarding </title>
         <style>
             body{
@@ -78,6 +90,44 @@
                 border-radius: 10px;
                 background-color: #000000dc;
             }
+
+            @media (max-width: 1024px) {
+                aside {
+                    height: auto;
+                }
+
+                #flexcontainer {
+                    background-size: auto;
+                }
+            }
+
+            @media (max-width: 768px) {
+                #flexcontainer {
+                    background-image: url(img/dog_bg_768.jpg);
+                    background-size: cover;
+                }
+
+                aside {
+                    background-color: #000000cf;
+                    background-position: center;
+                    color: white;
+                }
+
+                #location_button {
+                    display: block;
+                }
+            }
+
+            aside {
+                transition: all .2s ease-in-out;
+            }
+
+            aside:hover {
+                background-color: #ff4500bd;
+                height: 325px;
+                color: white;
+                
+            }
         </style>
     </head>
     <body>
@@ -94,11 +144,9 @@
                 <aside>
                     <h2>Price</h2>
                     <h3>Weekly Boarding</h3>
-                    <p>$425 - 7 days [24 hours from drop-off time] </li>
+                    <p>$425 - 7 days [24 hours from drop-off time] </p>
                     <h3>Daily Rate: </h3>
                     <p>$75 - 1 day [24 hours from drop-off time</p>
-                    
-                    </ul>
                 </aside>
                 <aside>
                     <h2>Hours of Operation</h2>
